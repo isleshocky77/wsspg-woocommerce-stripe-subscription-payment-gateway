@@ -4,7 +4,7 @@
  *
  * @package    Wsspg
  * @author     wsspg <wsspg@mail.com>
- * @version    1.0.6
+ * @version    1.0.6.1
  * @license    https://www.gnu.org/licenses/gpl-3.0.txt
  * @copyright  (c) 2016 https://github.com/wsspg
  *
@@ -129,7 +129,7 @@ function init_wsspg() {
 	if( ! class_exists( 'WC_Payment_Gateway' ) ) {
 		add_action( 'admin_init', 'fail_wsspg' );
 	} else {
-		$_version   = '1.0.5';
+		$_version   = '1.0.6.1';
 		$_id        = 'wsspg';
 		$_title     = 'Stripe (wsspg)';
 		$_desc      = sprintf(
