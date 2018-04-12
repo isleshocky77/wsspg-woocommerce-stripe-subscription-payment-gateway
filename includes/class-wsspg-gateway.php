@@ -610,6 +610,10 @@ class Wsspg_Payment_Gateway extends WC_Payment_Gateway_CC {
 			include( WSSPG_PLUGIN_DIR_PATH.'templates/checkout/wsspg-stripe-checkout.php' );
 		} else {
 			//	inline credit card form.
+			if (is_add_payment_method_page()) {
+				$b = WC_Checkout::instance();
+				$b->checkout_form_billing();
+			}
 			include( WSSPG_PLUGIN_DIR_PATH.'templates/checkout/wsspg-inline-cc-form.php' );
 		}
 	}
