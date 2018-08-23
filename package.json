@@ -2,7 +2,7 @@
   "name": "wsspg-woocommerce-stripe-subscription-payment-gateway",
   "repository": "https://github.com/wsspg/wsspg-woocommerce-stripe-subscription-payment-gateway",
   "license": "GPL-3.0",
-  "version": "1.0.6.1",
+  "version": "1.0.6.2g",
   "dependencies": {},
   "devDependencies": {
     "grunt": "~0.4.5",
