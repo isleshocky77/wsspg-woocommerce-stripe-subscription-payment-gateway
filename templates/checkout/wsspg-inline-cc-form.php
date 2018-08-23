@@ -16,12 +16,20 @@ if( ! defined( 'ABSPATH' ) ) exit; // exit if accessed directly.
 
 /**
  * Wsspg Inline Credit Card Form HTML
- * 
+ *
  * @since  1.0.0
  */
 ?>
 
 <fieldset id="wsspg-cc-fieldset" class="wc-credit-card-form wc-payment-form" data-pkey="<?php echo esc_attr( Wsspg::get_api_key( 'publishable' ) ); ?>">
+
+	<p class="form-row form-row-wide validate-required">
+		<label for="wsspg-cc-name">
+			<?php echo esc_html__( 'Name', 'wsspg-woocommerce-stripe-subscription-payment-gateway' ); ?>
+			<span class="required">*</span>
+		</label>
+		<input id="wsspg-cc-name" value="" class="input-text wc-credit-card-form-card-name" type="text" autocomplete="off" placeholder="Name" data-stripe="name" />
+	</p>
 	<p class="form-row form-row-wide validate-required">
 		<label for="wsspg-cc-number">
 			<?php echo esc_html__( 'Card Number', 'wsspg-woocommerce-stripe-subscription-payment-gateway' ); ?>
